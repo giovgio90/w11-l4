@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import { Navbar, Container } from "react-bootstrap";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ArticleList from "./components/ArticleList";
+
+import Article from "./components/Article";
+import ArticleDetails from "./components/ArticleDetails";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">Spaceflight News</Navbar.Brand>
+        </Container>
+      </Navbar>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ArticleList />} />
+          <Route path="/article/:id" element={<Article />} />
+          <Route path="/article/:id/details" element={<ArticleDetails />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
