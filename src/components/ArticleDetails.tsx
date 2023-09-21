@@ -27,7 +27,7 @@ const ArticleDetails = () => {
   }, [id]);
 
   if (!article) {
-    return <div>Caricamento in corso...</div>;
+    return <div className="text-center display-5 mt-5">Caricamento in corso...</div>;
   }
 
   return (
@@ -37,7 +37,7 @@ const ArticleDetails = () => {
         <Card.Body>
           <Card.Title className="display-4 ">{article.title}</Card.Title>
           <Card.Text className="mb-5">
-            <span className="fw-bold">Data di pubblicazione:</span> {article.updated_at}
+            <span className="fw-bold">Data di pubblicazione:</span> {article.updated_at.slice(0, 10)}
           </Card.Text>
           <Card.Text>{article.summary}</Card.Text>
           <Card.Text className="fw-bold">{article.news_site}</Card.Text>

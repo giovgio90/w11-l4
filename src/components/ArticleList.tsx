@@ -32,7 +32,7 @@ const ArticleList = () => {
   }, []);
 
   if (loading) {
-    return <div>Caricamento in corso...</div>;
+    return <div className="text-center display-5 mt-5">Caricamento in corso...</div>;
   }
 
   if (error) {
