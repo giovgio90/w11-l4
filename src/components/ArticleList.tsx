@@ -41,13 +41,15 @@ const ArticleList = () => {
 
   return (
     <Container className="mt-5">
-      {articles.map((article) => (
-        <Nav.Item key={article.id}>
-          <Nav.Link as={Link} to={`/article/${article.id}`} className="nav-link py-2 fs-5">
-            {article.title}
-          </Nav.Link>
-        </Nav.Item>
-      ))}
+      <div style={{ borderRadius: "10px", border: "1px solid black" }}>
+        {articles.map((article) => (
+          <Nav.Item key={article.id}>
+            <Nav.Link as={Link} to={`/article/${article.id}`} className="nav-link py-3 px-2 fs-5 fw-bolder">
+              {article.title}
+            </Nav.Link>
+          </Nav.Item>
+        ))}
+      </div>
     </Container>
   );
 };

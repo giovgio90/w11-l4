@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArticleApi } from "../interfaces/Article"; // Assicurati di importare le interfacce da article.ts
+import { ArticleApi } from "../interfaces/Article";
 import { Container, Card, Button } from "react-bootstrap";
 
 const ArticleDetails = () => {

@@ -9,7 +9,3 @@ export interface ArticleApi {
   updated_at: string;
   eatured: boolean;
 }
-
-export interface ArticleDetailsProps {
-  articleId: string;
-}
