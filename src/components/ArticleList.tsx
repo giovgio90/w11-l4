@@ -40,7 +40,7 @@ const ArticleList = () => {
   }
 
   return (
-    <Container>
+    <Container className="mt-5">
       {articles.map((article) => (
         <Nav.Item key={article.id}>
           <Nav.Link as={Link} to={`/article/${article.id}`} className="nav-link py-2 fs-5">

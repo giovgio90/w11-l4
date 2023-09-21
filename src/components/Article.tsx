@@ -40,7 +40,9 @@ const Article = () => {
             <Card.Img variant="top" src={article.image_url} alt={article.title} />
             <Card.Body>
               <Card.Title>{article.title}</Card.Title>
-              <Card.Text>Data di pubblicazione: {article.updated_at}</Card.Text>
+              <Card.Text className="mt-3">
+                <span className="fw-bold">Data di pubblicazione:</span> {article.updated_at}
+              </Card.Text>
               <Link to={`/article/${article.id}/details`}>
                 <Button variant="dark">Read more</Button>
               </Link>
